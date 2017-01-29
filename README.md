@@ -1,3 +1,5 @@
+<img src="https://avatars1.githubusercontent.com/u/286491?v=3&s=200" alt="Luigi" align="right" />
+
 # Secret Sauce Size Chart Editor
 
 Add, edit and view size charts of apparel brands with ease!
