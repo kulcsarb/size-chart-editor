@@ -15,13 +15,13 @@ Size charts can help navigate the landscape when shopping online.
 Size charts (also called size guides) are provided by manufacturers for their brands and can apply to
 one or more apparel categories. Separate size charts exist for women and men.
 
+### Dressbarn Misses Dresses Size Chart<sup>[4](#4)</sup>
+
 ![Dressbarn Misses Dresses Size Chart](size-charts/dressbarn-misses-dresses.gif)
 
-Dressbarn Misses Dresses Size Chart<sup>[4](#4)</sup>
+### Black Diamond Men's Apparel Size Chart<sup>[5](#5)</sup>
 
 ![Black Diamond Men's Apparel Size Chart](size-charts/black-diamond-mens-apparel.jpg)
-
-Black Diamond Men's Apparel Size Chart<sup>[5](#5)</sup>
 
 ## Contributing
 
