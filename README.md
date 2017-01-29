@@ -6,7 +6,7 @@ Add, edit and view size charts of apparel brands with ease!
 
 ## Background
 
-Size charts contain the measurements for each size label used by brands or designer for garments sold.
+Size charts contain the measurements for each size label used by brands or designers for garments sold.
 There are a large number of standard sizing systems around the world<sup>[1](#1)[2](#2)[3](#3)</sup>.
 
 Sizing is quite inconsistent and there can be great differences in fit and measurement among brands.
