@@ -72,6 +72,7 @@ definitions:
     type: object
     required:
     - name
+    - unit
     properties:
       id:
         type: integer
@@ -89,9 +90,9 @@ definitions:
         type: string
         description: Region code for the size chart
         example: US
-      units:
+      unit:
         type: string
-        description: measurement units used by this chart. allowed values are `cm | inch` defaults to `cm`
+        description: measurement units used by this chart. allowed values are `cm | inch`
         example: cm
       url:
         type: string

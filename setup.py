@@ -16,9 +16,13 @@ setup(
     install_requires=[
         'aiohttp',
         'aiohttp-swagger',
+        'webargs',
+        'mashmallow',
+        'pytest',
+        'pytest-aiohttp',
         'yoyo-migrations',
         'psycopg2',
-        'pytest'
+        'sphinx'
     ],
     entry_points={
         'console_scripts': [
