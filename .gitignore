@@ -1,0 +1,10 @@
+.idea
+.cache
+build/
+dist/
+src/sizechart_editor.egg-info
+*.pyc
+*.log
+*.c
+.env
+

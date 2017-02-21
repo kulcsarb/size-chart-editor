@@ -1,0 +1,132 @@
+swagger: '2.0'
+info:
+  description: API description for size chart editor
+  version: 0.1.0
+  title: Size Chart Editor API
+  contact:
+    email: kulcsarb@gmail.com
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+## Parameters
+parameters:
+  chart_id:
+    name: chart_id
+    type: integer
+    in: path
+    required: true
+    description: Chart's ID 
+paths:
+  /charts/:
+    get:
+      summary: Get the list of size charts 
+      responses:
+        200:
+          description: list of Size Chart objects
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SizeChart'
+    post:
+      summary: Creates a new size chart
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema: 
+            $ref: '#/definitions/SizeChart'
+      responses:
+        200: 
+          description: OK
+  /charts/{chart_id}:
+    get:
+      summary: shows a single Size Chart object
+      parameters:
+      - $ref: '#/parameters/chart_id'
+      responses:
+        200:
+          description: single SizeChart object, encoded in JSOn format
+          schema:
+            $ref: '#/definitions/SizeChart'
+    put:
+      summary: Updates the selected chart
+      parameters:
+      - $ref: '#/parameters/chart_id'
+      responses:
+        200:
+          description: single SizeChart object, encoded in JSOn format
+          schema:
+            $ref: '#/definitions/SizeChart'
+    delete:
+      summary: Deletes the selected chart
+      parameters:
+      - $ref: '#/parameters/chart_id'
+      responses:
+        200:
+          description: OK
+definitions:
+  SizeChart:
+    type: object
+    required:
+    - name
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      designation:
+        type: string
+        description: targeted type of people, eg. `women`, `men`, `children`, etc
+        example: women
+      vendor:
+        type: string
+        description: Unique name of the organization / company issed this size chart 
+        example: European Standards Organisation
+      region:
+        type: string
+        description: Region code for the size chart
+        example: US
+      units:
+        type: string
+        description: measurement units used by this chart. allowed values are `cm | inch` defaults to `cm`
+        example: cm
+      url:
+        type: string
+        description: source of the information, specified as an URL
+        example: https://en.wikipedia.org/wiki/Clothing_sizes
+      elements:
+        type: array
+        items:
+          $ref: '#/definitions/SizeChartCode'
+  SizeChartCode:
+    type: object
+    required:
+    - code
+    - body_parts
+    properties:
+      code: 
+        type: string
+        description: size code, can be anything, like `XL`, `M`, or `34`
+        example: XL
+      body_parts:
+        type: array
+        items:
+          $ref: '#/definitions/BodyPartSize'
+  BodyPartSize:
+    type: object
+    required:
+    - name
+    - size
+    properties:
+      name: 
+        type: string
+        description: name of the body part, eg `waist`, or `neck`
+        example: waist
+      size:
+        type: number
+        format: float
+        description: size of the current body part, in measurement units specified in `SizeChart.units`
+        example: 72.5
